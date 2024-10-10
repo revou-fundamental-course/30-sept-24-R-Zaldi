@@ -4,75 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator Suhu</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Kalkulator Konversi Suhu</h1>
-    </header>
+    <div class="container"> <!-- Menambahkan kotak yang membungkus seluruh konten -->
+        <header>
+            <h1>Kalkulator Konversi Suhu</h1>
+        </header>
 
-    <main>
-        <!-- form Content  -->
-        <section>
-            <!-- instruksi -->
-            <article>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-
-            <!-- inputan suhu -->
-            <form action="">
-                <div>
-                    <label for="input-suhu">Celcius (&deg;C)</label>
+        <main>
+            <!-- form Content  -->
+            <section>
+                <div class="row">
+                    <div class="column">
+                        <!-- inputan suhu -->
+                        <form action="">
+                            <div>
+                                <label for="input-suhu"><strong>Celcius</strong>(&deg;C)</label>
+                            </div>
+                            <textarea name="" id="input-suhu"></textarea>
+                        </form>
+                    </div>
+                    <div class="column">
+                        <!-- hasil inputan -->
+                        <div>
+                            <div>
+                                <label for="hasil-suhu"><strong>Fahrenheit</strong> (&deg;F)</label>
+                            </div>
+                            <textarea name="" id="hasil-suhu" readonly></textarea> <!-- Non-editable -->
+                        </div>
+                    </div>
                 </div>
 
-                <textarea name="" id="input-suhu"></textarea>
-
-                <div>
-                    <button>Konversi</button>
-                    <button>Reset </button>
-                    <button>Reverse</button>
+                <div class="button-row">
+                    <button type="button" class="konversi">Konversi</button>
+                    <button type="button" class="reset">Reset</button>
+                    <button type="button" class="reverse">Reverse</button>
                 </div>
 
-            </form>
-
-            <!-- hasil inputan -->
-            <div>
-                <div>
-                    <label for="hasil-suhu">Fahrenheit (&deg;F)</label>
+                <!-- cara kalkulasi -->
+                <div class="cara-kalkulasi">
+                    <div>
+                        <label for="how-to-suhu"><strong>Cara kalkulasi</strong></label>
+                    </div>
+                    <textarea name="" id="how-to-suhu" readonly></textarea> <!-- Tidak bisa diinput -->
                 </div>
-                
-                <textarea name="" id="hasil-suhu"></textarea>
-            </div>
+            </section>
 
-            <!-- cara kalkulasi -->
-            <div>
-                <div>
-                    <label for="how-to-suhu">Cara kalkulasi (&deg;F)</label>
-                </div>
-                
-                <textarea name="" id="how-to-suhu"></textarea>
-            </div>
-        </section>
+            <!-- Info Content -->
+            <section>
+                <header>
+                    <h2>Cara Konversi Suhu</h2> <!-- Ini akan berubah sesuai arah konversi -->
+                </header>
 
-        <!-- Info Content -->
-        <section>
-            <header>
-                <h2>Cara Konversi Celcius (&deg;C) ke Fahrenheit (&deg;F)</h2>
-            </header>
+                <article>
+                    <!-- Konten artikel ini akan diperbarui secara dinamis melalui JavaScript -->
+                </article>
+            </section>
+        </main>
 
-            <article>
-                <p>Suhu <span class="suhu-style">S</span> dalam derajat fahrenheit (&deg;F)</p>
+        <footer>
+            <p>Made by Zaldi@2024</p>
+        </footer>
 
-                <p><span class="suhu-style">S</span> (&deg;F) =</p>
-            </article>
-        </section>
-    </main>
+    </div>
 
-    <footer>
-
-    </footer>
+    <!-- Memasukkan file JS eksternal -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
